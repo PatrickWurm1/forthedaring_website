@@ -389,16 +389,26 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2.5rem 2rem;
+      padding: 2.5rem 1.5rem;
       gap: 0.75rem;
       transition: background 0.2s;
+      text-align: center;
     }
     .brand-cell:hover { background: #161616; }
+    .brand-icon-wrap {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
     .brand-icon {
       width: 40px;
       height: 40px;
       opacity: 0.5;
       transition: opacity 0.2s;
+      display: block;
     }
     .brand-cell:hover .brand-icon { opacity: 0.85; }
     .brand-name {
@@ -406,12 +416,16 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       color: var(--text);
+      text-align: center;
+      width: 100%;
     }
     .brand-industry {
       font-size: 0.65rem;
       font-weight: 300;
       letter-spacing: 0.04em;
       color: var(--muted);
+      text-align: center;
+      width: 100%;
     }
 
     /* CONTACT */
@@ -735,72 +749,72 @@
 
       <!-- UBS · Banking -->
       <div class="brand-cell">
-        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="brand-icon-wrap"><svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="5" y="32" width="30" height="3" rx="1" fill="white"/>
           <rect x="5" y="8" width="30" height="3" rx="1" fill="white"/>
           <rect x="8" y="13" width="3" height="17" rx="1" fill="white"/>
           <rect x="15" y="13" width="3" height="17" rx="1" fill="white"/>
           <rect x="22" y="13" width="3" height="17" rx="1" fill="white"/>
           <rect x="29" y="13" width="3" height="17" rx="1" fill="white"/>
-        </svg>
+        </svg></div>
         <span class="brand-name">UBS</span>
         <span class="brand-industry">Banking</span>
       </div>
 
       <!-- Samsung · Consumer Electronics -->
       <div class="brand-cell">
-        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="brand-icon-wrap"><svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="6" y="8" width="28" height="20" rx="2" stroke="white" stroke-width="2"/>
           <rect x="12" y="30" width="16" height="2.5" rx="1" fill="white"/>
           <rect x="9" y="12" width="22" height="12" rx="1" fill="white" opacity="0.15"/>
           <circle cx="20" cy="18" r="3" fill="white" opacity="0.6"/>
-        </svg>
+        </svg></div>
         <span class="brand-name">Samsung</span>
         <span class="brand-industry">Consumer Electronics</span>
       </div>
 
       <!-- Schneider Electric · Energy -->
       <div class="brand-cell">
-        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="brand-icon-wrap"><svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22 5 L10 22 H19 L18 35 L30 18 H21 Z" fill="white"/>
-        </svg>
+        </svg></div>
         <span class="brand-name">Schneider Electric</span>
         <span class="brand-industry">Energy & Infrastructure</span>
       </div>
 
       <!-- Electrolux · Home Appliances -->
       <div class="brand-cell">
-        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="brand-icon-wrap"><svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 6 L34 16 V34 H6 V16 Z" stroke="white" stroke-width="2" stroke-linejoin="round" fill="none"/>
           <rect x="15" y="24" width="10" height="10" rx="1" fill="white" opacity="0.5"/>
           <path d="M14 16 H26" stroke="white" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        </svg></div>
         <span class="brand-name">Electrolux</span>
         <span class="brand-industry">Home Appliances</span>
       </div>
 
       <!-- Swarovski · Luxury -->
       <div class="brand-cell">
-        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="brand-icon-wrap"><svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 5 L24 16 H36 L27 23 L30 35 L20 28 L10 35 L13 23 L4 16 H16 Z" stroke="white" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
-        </svg>
+        </svg></div>
         <span class="brand-name">Swarovski</span>
         <span class="brand-industry">Luxury & Lifestyle</span>
       </div>
 
       <!-- SwissRe · Insurance -->
       <div class="brand-cell">
-        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="brand-icon-wrap"><svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 5 L34 12 V24 C34 31 20 36 20 36 C20 36 6 31 6 24 V12 Z" stroke="white" stroke-width="2" stroke-linejoin="round" fill="none"/>
           <path d="M14 20 L18 24 L26 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        </svg></div>
         <span class="brand-name">Swiss Re</span>
         <span class="brand-industry">Reinsurance</span>
       </div>
 
       <!-- Swift · Financial Messaging -->
       <div class="brand-cell">
-        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="brand-icon-wrap"><svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="8" cy="20" r="3" fill="white"/>
           <circle cx="32" cy="12" r="3" fill="white"/>
           <circle cx="32" cy="28" r="3" fill="white"/>
@@ -808,14 +822,14 @@
           <path d="M11 20 Q20 28 29 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
           <path d="M26 9 L32 12 L26 15" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <path d="M26 25 L32 28 L26 31" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </svg>
+        </svg></div>
         <span class="brand-name">Swift</span>
         <span class="brand-industry">Financial Messaging</span>
       </div>
 
       <!-- MediaTek · Semiconductors -->
       <div class="brand-cell">
-        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="brand-icon-wrap"><svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="13" y="13" width="14" height="14" rx="1" stroke="white" stroke-width="2"/>
           <line x1="17" y1="13" x2="17" y2="7" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
           <line x1="23" y1="13" x2="23" y2="7" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
@@ -825,7 +839,7 @@
           <line x1="13" y1="23" x2="7" y2="23" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
           <line x1="27" y1="17" x2="33" y2="17" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
           <line x1="27" y1="23" x2="33" y2="23" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
+        </svg></div>
         <span class="brand-name">MediaTek</span>
         <span class="brand-industry">Semiconductors</span>
       </div>
