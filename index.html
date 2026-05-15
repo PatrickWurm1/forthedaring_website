@@ -140,7 +140,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 22% 15%;
+      object-position: 28% 20%;
       filter: brightness(0.9);
       z-index: 0;
     }
@@ -295,7 +295,7 @@
     .about-body {
       font-size: 1rem;
       font-weight: 300;
-      color: var(--muted);
+      color: #c4c4c4;
       line-height: 1.85;
     }
     .about-body em {
@@ -346,7 +346,7 @@
     .exp-desc {
       font-size: 0.88rem;
       font-weight: 300;
-      color: var(--muted);
+      color: #c4c4c4;
       line-height: 1.75;
       max-width: 580px;
     }
@@ -364,14 +364,14 @@
       padding: 0.2rem 0.55rem;
       border: 1px solid var(--border);
       border-radius: 2px;
-      color: #777;
+      color: #999;
     }
 
     /* BRANDS */
     .brands { border-top: 1px solid var(--border); background: var(--surface); }
     .brands-intro {
       font-size: 0.9rem;
-      color: var(--muted);
+      color: #c4c4c4;
       max-width: 460px;
       margin-bottom: 4rem;
       line-height: 1.7;
@@ -440,7 +440,7 @@
     .contact-blurb {
       font-size: 0.9rem;
       font-weight: 300;
-      color: var(--muted);
+      color: #c4c4c4;
       line-height: 1.8;
       margin-bottom: 2.5rem;
     }
@@ -541,6 +541,12 @@
       transition: color 0.2s;
     }
     .footer-back:hover { color: var(--text); }
+
+    @media (min-width: 1400px) {
+      .hero-image {
+        object-position: 30% 20%;
+      }
+    }
 
     @media (max-width: 1024px) {
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
