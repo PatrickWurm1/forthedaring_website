@@ -634,6 +634,39 @@
       .brands-grid { grid-template-columns: repeat(2, 1fr); }
       .section-title { font-size: 1.6rem; }
     }
+
+    /* ── SCROLL ANIMATIONS ── */
+
+    /* 1. Fade-up reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 2. Nav scroll state */
+    nav {
+      transition: background 0.4s ease, border-bottom-color 0.4s ease;
+    }
+    nav.scrolled {
+      background: rgba(10, 10, 10, 0.97);
+    }
+
+    /* 3. Pill stagger */
+    .about-pill {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out, border-color 0.2s, color 0.2s;
+    }
+    .about-pill.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
   </style>
 </head>
 <body>
@@ -955,11 +988,58 @@
       }, 900);
     }
 
-    // Subtle nav shadow on scroll
+    // ── 1. FADE-UP REVEAL ──
+    const revealEls = [
+      ...document.querySelectorAll('.section-label'),
+      ...document.querySelectorAll('.section-title'),
+      ...document.querySelectorAll('.exp-row'),
+      ...document.querySelectorAll('.brand-cell'),
+      ...document.querySelectorAll('.about-grid'),
+      ...document.querySelectorAll('.contact-grid'),
+    ];
+    revealEls.forEach(el => el.classList.add('reveal'));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ── 2. NAV ON SCROLL ──
+    const nav = document.querySelector('nav');
+    const heroHeight = document.querySelector('.hero').offsetHeight;
+
+    // ── 3. PILL STAGGER ──
+    const pills = document.querySelectorAll('.about-pill');
+    const pillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          pills.forEach((pill, i) => {
+            setTimeout(() => pill.classList.add('visible'), i * 70);
+          });
+          pillObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    if (pills.length) pillObserver.observe(pills[0].closest('.about-pills') || pills[0]);
+
+    // ── 4. NAV scroll handler ──
     window.addEventListener('scroll', () => {
-      document.querySelector('nav').style.borderBottomColor =
-        window.scrollY > 20 ? '#2a2a2a' : 'var(--border)';
-    });
+      const y = window.scrollY;
+
+      // Nav state
+      nav.style.borderBottomColor = y > 20 ? '#2a2a2a' : 'var(--border)';
+      if (y > heroHeight * 0.6) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }, { passive: true });
   </script>
 
 </body>
