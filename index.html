@@ -1228,9 +1228,7 @@
     }, { threshold: 0.3 });
     if (pills.length) pillObserver.observe(pills[0].closest('.about-pills') || pills[0]);
 
-    // ── 4. NAV + HERO PARALLAX scroll handler ──
-    const heroImg = document.querySelector('.hero-image');
-
+    // ── 4. NAV scroll handler ──
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
 
@@ -1240,11 +1238,6 @@
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
-      }
-
-      // Hero image parallax — only while hero is visible
-      if (heroImg && y < heroHeight) {
-        heroImg.style.transform = `translateY(${y * 0.35}px)`;
       }
     }, { passive: true });
 
