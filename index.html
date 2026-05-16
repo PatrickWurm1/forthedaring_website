@@ -673,6 +673,22 @@
       transform: translateY(0);
     }
 
+    .lang-toggle {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--muted);
+      font-family: var(--font);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.7rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      margin-left: 1.5rem;
+    }
+    .lang-toggle:hover { color: var(--text); border-color: rgba(255,255,255,0.4); }
   </style>
 </head>
 <body>
@@ -681,11 +697,12 @@
   <nav>
     <a href="/" class="nav-logo">ForTheDaring</a>
     <ul class="nav-links">
-      <li><a href="#experience">About</a></li>
-      <li><a href="#experience-timeline">Experience</a></li>
-      <li><a href="#brands">Clients</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#experience" data-i18n="nav_about">About</a></li>
+      <li><a href="#experience-timeline" data-i18n="nav_experience">Experience</a></li>
+      <li><a href="#brands" data-i18n="nav_clients">Clients</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
     </ul>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">DE</button>
   </nav>
 
   <!-- HERO -->
@@ -694,35 +711,35 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
 <h1>Patrick Wurm</h1>
-      <p class="hero-subtitle">Fractional CMO &nbsp;|&nbsp; C-Level Growth Advisor &nbsp;|&nbsp; Brand Strategy &amp; Go-to-Market Consultant &nbsp;|&nbsp; AI-Powered Marketing Leadership</p>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">Fractional CMO &nbsp;|&nbsp; C-Level Growth Advisor &nbsp;|&nbsp; Brand Strategy &amp; Go-to-Market Consultant &nbsp;|&nbsp; AI-Powered Marketing Leadership</p>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="about" id="experience">
-    <div class="section-label">About</div>
+    <div class="section-label" data-i18n="about_label">About</div>
 
     <div class="about-grid">
       <div>
-        <p class="about-statement">
+        <p class="about-statement" data-i18n="about_statement">
           <strong>15+ years</strong> of senior marketing leadership
           including CMO, CGO &amp; Co-CEO, working with
           <strong>global brands</strong> that demand results.
         </p>
         <div class="about-pills">
-          <span class="about-pill">Brand Strategy</span>
-          <span class="about-pill">Go-to-Market</span>
-          <span class="about-pill">Value Proposition</span>
-          <span class="about-pill">AI-Powered Marketing</span>
-          <span class="about-pill">Fractional CMO</span>
-          <span class="about-pill">Growth Advisory</span>
-          <span class="about-pill">Campaign Development</span>
-          <span class="about-pill">Customer Experience</span>
+          <span class="about-pill" data-i18n="pill_brand_strategy">Brand Strategy</span>
+          <span class="about-pill" data-i18n="pill_gtm">Go-to-Market</span>
+          <span class="about-pill" data-i18n="pill_value_prop">Value Proposition</span>
+          <span class="about-pill" data-i18n="pill_ai_marketing">AI-Powered Marketing</span>
+          <span class="about-pill" data-i18n="pill_fractional_cmo">Fractional CMO</span>
+          <span class="about-pill" data-i18n="pill_growth_advisory">Growth Advisory</span>
+          <span class="about-pill" data-i18n="pill_campaign_dev">Campaign Development</span>
+          <span class="about-pill" data-i18n="pill_cx">Customer Experience</span>
         </div>
       </div>
 
       <div class="about-right">
-        <p class="about-body">
+        <p class="about-body" data-i18n="about_body">
           15+ years of senior marketing leadership including CMO, CGO and Co-CEO roles,
           working with brands like <em>Schneider Electric</em>, <em>UBS</em>,
           <em>Samsung</em> and <em>Electrolux</em>.<br><br>
@@ -737,20 +754,20 @@
 
   <!-- EXPERIENCE -->
   <section class="experience" id="experience-timeline">
-    <div class="section-label">Experience</div>
-    <h2 class="section-title">Patrick Wurm · Fractional CMO, Brand Strategist &amp; Go-to-Market Leader</h2>
+    <div class="section-label" data-i18n="exp_label">Experience</div>
+    <h2 class="section-title" data-i18n="exp_title">Patrick Wurm · Fractional CMO, Brand Strategist &amp; Go-to-Market Leader</h2>
 
     <div class="exp-list">
 
       <div class="exp-row">
         <div class="exp-meta">
-          <div class="exp-period">2019 to Present</div>
+          <div class="exp-period" data-i18n="period_ftd">2019 to Present</div>
           <div class="exp-co">ForTheDaring</div>
           <div class="exp-location">Berlin, Germany</div>
         </div>
         <div class="exp-detail">
-          <div class="exp-title">Fractional CMO & Strategy Director</div>
-          <p class="exp-desc">Fractional CMO and senior B2B brand consultant partnering with ambitious companies to build clearer brands, sharper value propositions and go-to-market strategies that win. Backed by a network of senior strategists and creative experts. AI-powered for speed and scale.</p>
+          <div class="exp-title" data-i18n="ftd_role">Fractional CMO & Strategy Director</div>
+          <p class="exp-desc" data-i18n="ftd_desc">Fractional CMO and senior B2B brand consultant partnering with ambitious companies to build clearer brands, sharper value propositions and go-to-market strategies that win. Backed by a network of senior strategists and creative experts. AI-powered for speed and scale.</p>
           <div class="exp-brands">
             <span class="exp-brand-tag">Schneider Electric</span>
             <span class="exp-brand-tag">Swift</span>
@@ -762,25 +779,25 @@
 
       <div class="exp-row">
         <div class="exp-meta">
-          <div class="exp-period">2021 to 2025</div>
+          <div class="exp-period" data-i18n="period_aeris">2021 to 2025</div>
           <div class="exp-co">Aeris</div>
           <div class="exp-location">Munich, Germany</div>
         </div>
         <div class="exp-detail">
-          <div class="exp-title">CMO · Chief Growth Officer · Co-CEO</div>
-          <p class="exp-desc">Joined as Fractional CMO and progressed through CGO to Co-CEO. Led a complete brand relaunch positioning Aeris as a modern ergonomic leader. Drove digital transformation, built DTC e-commerce from the ground up and deployed an AI customer service tool. As Co-CEO set company-wide direction across marketing, product, sales and operations.</p>
+          <div class="exp-title" data-i18n="aeris_role">CMO · Chief Growth Officer · Co-CEO</div>
+          <p class="exp-desc" data-i18n="aeris_desc">Joined as Fractional CMO and progressed through CGO to Co-CEO. Led a complete brand relaunch positioning Aeris as a modern ergonomic leader. Drove digital transformation, built DTC e-commerce from the ground up and deployed an AI customer service tool. As Co-CEO set company-wide direction across marketing, product, sales and operations.</p>
         </div>
       </div>
 
       <div class="exp-row">
         <div class="exp-meta">
-          <div class="exp-period">2013 to 2019</div>
+          <div class="exp-period" data-i18n="period_prophet">2013 to 2019</div>
           <div class="exp-co">Prophet</div>
           <div class="exp-location">London, Berlin, Zurich</div>
         </div>
         <div class="exp-detail">
-          <div class="exp-title">Senior Engagement Manager</div>
-          <p class="exp-desc">Led large-scale growth strategy, brand and marketing transformation projects for global companies across Europe and APAC. Rose through consultant to senior engagement manager over seven years.</p>
+          <div class="exp-title" data-i18n="prophet_role">Senior Engagement Manager</div>
+          <p class="exp-desc" data-i18n="prophet_desc">Led large-scale growth strategy, brand and marketing transformation projects for global companies across Europe and APAC. Rose through consultant to senior engagement manager over seven years.</p>
           <div class="exp-brands">
             <span class="exp-brand-tag">UBS</span>
             <span class="exp-brand-tag">Samsung</span>
@@ -794,13 +811,13 @@
 
       <div class="exp-row">
         <div class="exp-meta">
-          <div class="exp-period">2009 to 2013</div>
+          <div class="exp-period" data-i18n="period_figtree">2009 to 2013</div>
           <div class="exp-co">Figtree</div>
           <div class="exp-location">London</div>
         </div>
         <div class="exp-detail">
-          <div class="exp-title">Brand & Marketing Consultant</div>
-          <p class="exp-desc">Shaped consumer brands across positioning, CX design, retail strategy and large-scale qualitative and quantitative research. Created HTC's consumer-facing brand and global retail experience, and advised post their acquisition of Beats.</p>
+          <div class="exp-title" data-i18n="figtree_role">Brand & Marketing Consultant</div>
+          <p class="exp-desc" data-i18n="figtree_desc">Shaped consumer brands across positioning, CX design, retail strategy and large-scale qualitative and quantitative research. Created HTC's consumer-facing brand and global retail experience, and advised post their acquisition of Beats.</p>
           <div class="exp-brands">
             <span class="exp-brand-tag">HTC</span>
             <span class="exp-brand-tag">Orange Group</span>
@@ -822,8 +839,8 @@
     </div>
 
     <section class="brands" id="brands">
-    <div class="section-label">Clients</div>
-    <h2 class="section-title">Brand examples I have worked with.</h2>
+    <div class="section-label" data-i18n="brands_label">Clients</div>
+    <h2 class="section-title" data-i18n="brands_title">Brand examples I have worked with.</h2>
 
     <div class="brands-grid">
 
@@ -838,7 +855,7 @@
           <rect x="29" y="13" width="3" height="17" rx="1" fill="white"/>
         </svg></div>
         <span class="brand-name">UBS</span>
-        <span class="brand-industry">Banking</span>
+        <span class="brand-industry" data-i18n="ind_banking">Banking</span>
       </div>
 
       <!-- Samsung · Consumer Electronics -->
@@ -850,7 +867,7 @@
           <circle cx="20" cy="18" r="3" fill="white" opacity="0.6"/>
         </svg></div>
         <span class="brand-name">Samsung</span>
-        <span class="brand-industry">Consumer Electronics</span>
+        <span class="brand-industry" data-i18n="ind_consumer_electronics">Consumer Electronics</span>
       </div>
 
       <!-- Schneider Electric · Energy -->
@@ -859,7 +876,7 @@
           <path d="M22 5 L10 22 H19 L18 35 L30 18 H21 Z" fill="white"/>
         </svg></div>
         <span class="brand-name">Schneider Electric</span>
-        <span class="brand-industry">Energy & Infrastructure</span>
+        <span class="brand-industry" data-i18n="ind_energy">Energy & Infrastructure</span>
       </div>
 
       <!-- Electrolux · Home Appliances -->
@@ -870,7 +887,7 @@
           <path d="M14 16 H26" stroke="white" stroke-width="2" stroke-linecap="round"/>
         </svg></div>
         <span class="brand-name">Electrolux</span>
-        <span class="brand-industry">Home Appliances</span>
+        <span class="brand-industry" data-i18n="ind_home_appliances">Home Appliances</span>
       </div>
 
       <!-- Swarovski · Luxury -->
@@ -879,7 +896,7 @@
           <path d="M20 5 L24 16 H36 L27 23 L30 35 L20 28 L10 35 L13 23 L4 16 H16 Z" stroke="white" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
         </svg></div>
         <span class="brand-name">Swarovski</span>
-        <span class="brand-industry">Luxury & Lifestyle</span>
+        <span class="brand-industry" data-i18n="ind_luxury">Luxury & Lifestyle</span>
       </div>
 
       <!-- SwissRe · Insurance -->
@@ -889,7 +906,7 @@
           <path d="M14 20 L18 24 L26 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg></div>
         <span class="brand-name">Swiss Re</span>
-        <span class="brand-industry">Reinsurance</span>
+        <span class="brand-industry" data-i18n="ind_reinsurance">Reinsurance</span>
       </div>
 
       <!-- Swift · Financial Messaging -->
@@ -904,7 +921,7 @@
           <path d="M26 25 L32 28 L26 31" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg></div>
         <span class="brand-name">Swift</span>
-        <span class="brand-industry">Financial Messaging</span>
+        <span class="brand-industry" data-i18n="ind_financial_messaging">Financial Messaging</span>
       </div>
 
       <!-- MediaTek · Semiconductors -->
@@ -921,7 +938,7 @@
           <line x1="27" y1="23" x2="33" y2="23" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
         </svg></div>
         <span class="brand-name">MediaTek</span>
-        <span class="brand-industry">Semiconductors</span>
+        <span class="brand-industry" data-i18n="ind_semiconductors">Semiconductors</span>
       </div>
 
       <!-- France Telecom · Telecoms -->
@@ -932,7 +949,7 @@
           <line x1="20" y1="5" x2="20" y2="18" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
         </svg></div>
         <span class="brand-name">France Telecom</span>
-        <span class="brand-industry">Telecommunications</span>
+        <span class="brand-industry" data-i18n="ind_telecoms">Telecommunications</span>
       </div>
 
       <!-- Orange · Telecoms -->
@@ -942,7 +959,7 @@
           <path d="M12 20 Q20 10 28 20 Q20 30 12 20Z" stroke="white" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
         </svg></div>
         <span class="brand-name">Orange</span>
-        <span class="brand-industry">Telecommunications</span>
+        <span class="brand-industry" data-i18n="ind_telecoms">Telecommunications</span>
       </div>
 
       <!-- Aeris · Ergonomics -->
@@ -954,7 +971,7 @@
           <circle cx="20" cy="11" r="3" stroke="white" stroke-width="1.8" fill="none"/>
         </svg></div>
         <span class="brand-name">Aeris</span>
-        <span class="brand-industry">Ergonomics</span>
+        <span class="brand-industry" data-i18n="ind_ergonomics">Ergonomics</span>
       </div>
 
       <!-- Medical Clinics · Healthcare -->
@@ -965,7 +982,7 @@
           <line x1="13" y1="20" x2="27" y2="20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
         </svg></div>
         <span class="brand-name">Medical Clinics</span>
-        <span class="brand-industry">Healthcare</span>
+        <span class="brand-industry" data-i18n="ind_healthcare">Healthcare</span>
       </div>
 
     </div>
@@ -973,12 +990,12 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">Work with us</h2>
+    <div class="section-label" data-i18n="contact_label">Contact</div>
+    <h2 class="section-title" data-i18n="contact_title">Work with us</h2>
 
     <div class="contact-grid">
       <div class="contact-info">
-        <p class="contact-blurb">Whether you have a project in mind, want to explore a collaboration, or just want to say hello, my inbox is open. I typically reply within 24 hours.</p>
+        <p class="contact-blurb" data-i18n="contact_blurb">Whether you have a project in mind, want to explore a collaboration, or just want to say hello, my inbox is open. I typically reply within 24 hours.</p>
         <div class="contact-links">
           <a href="mailto:Patrick@forthedaring.com" class="contact-link">
             <span>→</span> Patrick@forthedaring.com
@@ -992,32 +1009,32 @@
       <form id="contactForm" onsubmit="handleSubmit(event)">
         <div class="form-row">
           <div class="field">
-            <label for="name">Name</label>
+            <label for="name" data-i18n="form_name">Name</label>
             <input type="text" id="name" name="name" placeholder="Jane Smith" required />
           </div>
           <div class="field">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="form_email">Email</label>
             <input type="email" id="email" name="email" placeholder="jane@example.com" required />
           </div>
         </div>
         <div class="field">
-          <label for="subject">Subject</label>
+          <label for="subject" data-i18n="form_subject">Subject</label>
           <input type="text" id="subject" name="subject" placeholder="Project enquiry" />
         </div>
         <div class="field">
-          <label for="message">Message</label>
+          <label for="message" data-i18n="form_message">Message</label>
           <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
         </div>
-        <button type="submit" class="btn">Get in touch →</button>
-        <div class="form-success" id="formSuccess">Message sent! I'll be in touch soon.</div>
+        <button type="submit" class="btn" data-i18n="form_submit">Get in touch →</button>
+        <div class="form-success" id="formSuccess" data-i18n="form_success">Message sent! I'll be in touch soon.</div>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <span class="footer-copy">© 2026 Patrick Wurm. All rights reserved.</span>
-    <a href="#" class="footer-back">Back to top ↑</a>
+    <span class="footer-copy" data-i18n="footer_copy">© 2026 Patrick Wurm. All rights reserved.</span>
+    <a href="#" class="footer-back" data-i18n="footer_back">Back to top ↑</a>
   </footer>
 
   <script>
@@ -1105,6 +1122,160 @@
         nav.classList.remove('scrolled');
       }
     }, { passive: true });
+
+    // ── LANGUAGE SWITCHER ──
+    const translations = {
+      en: {
+        nav_about: 'About',
+        nav_experience: 'Experience',
+        nav_clients: 'Clients',
+        nav_contact: 'Contact',
+        hero_subtitle: 'Fractional CMO &nbsp;|&nbsp; C-Level Growth Advisor &nbsp;|&nbsp; Brand Strategy &amp; Go-to-Market Consultant &nbsp;|&nbsp; AI-Powered Marketing Leadership',
+        about_label: 'About',
+        about_statement: '<strong>15+ years</strong> of senior marketing leadership including CMO, CGO &amp; Co-CEO, working with <strong>global brands</strong> that demand results.',
+        pill_brand_strategy: 'Brand Strategy',
+        pill_gtm: 'Go-to-Market',
+        pill_value_prop: 'Value Proposition',
+        pill_ai_marketing: 'AI-Powered Marketing',
+        pill_fractional_cmo: 'Fractional CMO',
+        pill_growth_advisory: 'Growth Advisory',
+        pill_campaign_dev: 'Campaign Development',
+        pill_cx: 'Customer Experience',
+        about_body: '15+ years of senior marketing leadership including CMO, CGO and Co-CEO roles, working with brands like <em>Schneider Electric</em>, <em>UBS</em>, <em>Samsung</em> and <em>Electrolux</em>.<br><br>I partner with ambitious companies to build clearer brands, sharper value propositions and go-to-market strategies that win. Backed by a wide network of senior strategists and creative experts.<br><br>AI-powered for speed and scale.',
+        exp_label: 'Experience',
+        exp_title: 'Patrick Wurm · Fractional CMO, Brand Strategist &amp; Go-to-Market Leader',
+        period_ftd: '2019 to Present',
+        period_aeris: '2021 to 2025',
+        period_prophet: '2013 to 2019',
+        period_figtree: '2009 to 2013',
+        ftd_role: 'Fractional CMO &amp; Strategy Director',
+        ftd_desc: 'Fractional CMO and senior B2B brand consultant partnering with ambitious companies to build clearer brands, sharper value propositions and go-to-market strategies that win. Backed by a network of senior strategists and creative experts. AI-powered for speed and scale.',
+        aeris_role: 'CMO · Chief Growth Officer · Co-CEO',
+        aeris_desc: 'Joined as Fractional CMO and progressed through CGO to Co-CEO. Led a complete brand relaunch positioning Aeris as a modern ergonomic leader. Drove digital transformation, built DTC e-commerce from the ground up and deployed an AI customer service tool. As Co-CEO set company-wide direction across marketing, product, sales and operations.',
+        prophet_role: 'Senior Engagement Manager',
+        prophet_desc: 'Led large-scale growth strategy, brand and marketing transformation projects for global companies across Europe and APAC. Rose through consultant to senior engagement manager over seven years.',
+        figtree_role: 'Brand &amp; Marketing Consultant',
+        figtree_desc: "Shaped consumer brands across positioning, CX design, retail strategy and large-scale qualitative and quantitative research. Created HTC's consumer-facing brand and global retail experience, and advised post their acquisition of Beats.",
+        brands_label: 'Clients',
+        brands_title: 'Brand examples I have worked with.',
+        ind_banking: 'Banking',
+        ind_consumer_electronics: 'Consumer Electronics',
+        ind_energy: 'Energy &amp; Infrastructure',
+        ind_home_appliances: 'Home Appliances',
+        ind_luxury: 'Luxury &amp; Lifestyle',
+        ind_reinsurance: 'Reinsurance',
+        ind_financial_messaging: 'Financial Messaging',
+        ind_semiconductors: 'Semiconductors',
+        ind_telecoms: 'Telecommunications',
+        ind_ergonomics: 'Ergonomics',
+        ind_healthcare: 'Healthcare',
+        contact_label: 'Contact',
+        contact_title: 'Work with us',
+        contact_blurb: 'Whether you have a project in mind, want to explore a collaboration, or just want to say hello, my inbox is open. I typically reply within 24 hours.',
+        form_name: 'Name',
+        form_email: 'Email',
+        form_subject: 'Subject',
+        form_message: 'Message',
+        form_submit: 'Get in touch →',
+        form_success: "Message sent! I'll be in touch soon.",
+        footer_copy: '© 2026 Patrick Wurm. All rights reserved.',
+        footer_back: 'Back to top ↑',
+      },
+      de: {
+        nav_about: 'Über mich',
+        nav_experience: 'Erfahrung',
+        nav_clients: 'Kunden',
+        nav_contact: 'Kontakt',
+        hero_subtitle: 'Fractional CMO &nbsp;|&nbsp; C-Level-Wachstumsberater &nbsp;|&nbsp; Markenstrategie &amp; Go-to-Market-Beratung &nbsp;|&nbsp; KI-gestütztes Marketing',
+        about_label: 'Über mich',
+        about_statement: '<strong>15+ Jahre</strong> Senior-Marketingführung als CMO, CGO &amp; Co-CEO – für <strong>globale Marken</strong>, die Ergebnisse einfordern.',
+        pill_brand_strategy: 'Markenstrategie',
+        pill_gtm: 'Go-to-Market',
+        pill_value_prop: 'Wertversprechen',
+        pill_ai_marketing: 'KI-gestütztes Marketing',
+        pill_fractional_cmo: 'Fractional CMO',
+        pill_growth_advisory: 'Wachstumsberatung',
+        pill_campaign_dev: 'Kampagnenentwicklung',
+        pill_cx: 'Kundenerlebnis',
+        about_body: '15+ Jahre Senior-Marketingführung als CMO, CGO und Co-CEO – mit Marken wie <em>Schneider Electric</em>, <em>UBS</em>, <em>Samsung</em> und <em>Electrolux</em>.<br><br>Ich arbeite mit ambitionierten Unternehmen zusammen, um klarere Marken, schärfere Wertversprechen und Go-to-Market-Strategien zu entwickeln, die überzeugen. Unterstützt von einem breiten Netzwerk aus erfahrenen Strategen und kreativen Experten.<br><br>KI-gestützt für Geschwindigkeit und Skalierung.',
+        exp_label: 'Erfahrung',
+        exp_title: 'Patrick Wurm · Fractional CMO, Markenstratege &amp; Go-to-Market-Leader',
+        period_ftd: '2019 bis heute',
+        period_aeris: '2021 bis 2025',
+        period_prophet: '2013 bis 2019',
+        period_figtree: '2009 bis 2013',
+        ftd_role: 'Fractional CMO &amp; Strategiedirektor',
+        ftd_desc: 'Fractional CMO und Senior-B2B-Markenberater, der mit ambitionierten Unternehmen zusammenarbeitet, um klarere Marken, schärfere Wertversprechen und Go-to-Market-Strategien zu entwickeln. Unterstützt von einem Netzwerk erfahrener Strategen und kreativer Experten. KI-gestützt für Geschwindigkeit und Skalierung.',
+        aeris_role: 'CMO · Chief Growth Officer · Co-CEO',
+        aeris_desc: 'Als Fractional CMO eingestiegen und über CGO bis zum Co-CEO aufgestiegen. Leitete einen vollständigen Marken-Relaunch, der Aeris als modernen Marktführer im Bereich Ergonomie positionierte. Trieb die digitale Transformation voran, baute DTC-E-Commerce von Grund auf auf und implementierte ein KI-gestütztes Kundenservice-Tool. Als Co-CEO verantwortete er die unternehmensweite Ausrichtung in Marketing, Produkt, Vertrieb und Betrieb.',
+        prophet_role: 'Senior Engagement Manager',
+        prophet_desc: 'Leitete groß angelegte Wachstumsstrategien sowie Marken- und Marketingtransformationsprojekte für globale Unternehmen in Europa und im asiatisch-pazifischen Raum. Stieg in sieben Jahren vom Consultant zum Senior Engagement Manager auf.',
+        figtree_role: 'Marken- &amp; Marketingberater',
+        figtree_desc: 'Gestaltete Verbrauchermarken in den Bereichen Positionierung, CX-Design, Einzelhandelsstrategie sowie groß angelegte qualitative und quantitative Forschung. Entwickelte HTCs verbraucherorientierte Marke und das globale Einzelhandelserlebnis und beriet das Unternehmen nach der Übernahme von Beats.',
+        brands_label: 'Kunden',
+        brands_title: 'Marken, mit denen ich gearbeitet habe.',
+        ind_banking: 'Bankwesen',
+        ind_consumer_electronics: 'Unterhaltungselektronik',
+        ind_energy: 'Energie &amp; Infrastruktur',
+        ind_home_appliances: 'Haushaltsgeräte',
+        ind_luxury: 'Luxus &amp; Lifestyle',
+        ind_reinsurance: 'Rückversicherung',
+        ind_financial_messaging: 'Finanzkommunikation',
+        ind_semiconductors: 'Halbleiter',
+        ind_telecoms: 'Telekommunikation',
+        ind_ergonomics: 'Ergonomie',
+        ind_healthcare: 'Gesundheitswesen',
+        contact_label: 'Kontakt',
+        contact_title: 'Arbeiten Sie mit uns',
+        contact_blurb: 'Ob Sie ein Projekt im Sinn haben, eine Zusammenarbeit erkunden möchten oder einfach Hallo sagen wollen – mein Posteingang ist offen. Ich antworte in der Regel innerhalb von 24 Stunden.',
+        form_name: 'Name',
+        form_email: 'E-Mail',
+        form_subject: 'Betreff',
+        form_message: 'Nachricht',
+        form_submit: 'Kontakt aufnehmen →',
+        form_success: 'Nachricht gesendet! Ich melde mich bald.',
+        footer_copy: '© 2026 Patrick Wurm. Alle Rechte vorbehalten.',
+        footer_back: 'Nach oben ↑',
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function applyLang(lang) {
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      // Update placeholders
+      const placeholders = {
+        en: { name: 'Jane Smith', email: 'jane@example.com', subject: 'Project enquiry', message: 'Tell me about your project...' },
+        de: { name: 'Max Mustermann', email: 'max@beispiel.de', subject: 'Projektanfrage', message: 'Erzählen Sie mir von Ihrem Projekt...' }
+      };
+      const p = placeholders[lang];
+      const nameEl = document.getElementById('name');
+      const emailEl = document.getElementById('email');
+      const subjectEl = document.getElementById('subject');
+      const messageEl = document.getElementById('message');
+      if (nameEl) nameEl.placeholder = p.name;
+      if (emailEl) emailEl.placeholder = p.email;
+      if (subjectEl) subjectEl.placeholder = p.subject;
+      if (messageEl) messageEl.placeholder = p.message;
+      // Update toggle button
+      const btn = document.getElementById('langToggle');
+      if (btn) btn.textContent = lang === 'en' ? 'DE' : 'EN';
+      // Update html lang attribute
+      document.documentElement.lang = lang;
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+    }
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      applyLang(currentLang === 'en' ? 'de' : 'en');
+    });
+
+    // Apply saved language on load
+    applyLang(currentLang);
   </script>
 
 </body>
