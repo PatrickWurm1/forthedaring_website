@@ -971,21 +971,36 @@
   </footer>
 
   <script>
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('.btn');
+      const form = e.target;
+      const btn = form.querySelector('.btn');
       const success = document.getElementById('formSuccess');
+
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
-      // TODO: wire up to your form backend (e.g. Formspree, Netlify Forms, EmailJS)
-      setTimeout(() => {
-        e.target.reset();
+      try {
+        const res = await fetch('https://formspree.io/f/xojbaqdr', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (res.ok) {
+          form.reset();
+          success.style.display = 'block';
+          setTimeout(() => success.style.display = 'none', 5000);
+        } else {
+          const data = await res.json();
+          alert(data?.errors?.[0]?.message || 'Something went wrong. Please try again.');
+        }
+      } catch {
+        alert('Network error. Please try again.');
+      } finally {
         btn.textContent = 'Get in touch →';
         btn.disabled = false;
-        success.style.display = 'block';
-        setTimeout(() => success.style.display = 'none', 5000);
-      }, 900);
+      }
     }
 
     // ── 1. FADE-UP REVEAL ──
